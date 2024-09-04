@@ -25,11 +25,8 @@ export class ItemListComponent implements OnInit {
       item.title.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
   }
-  sortItemsAsc() {
-  this.filteredItems.sort((a, b) => a.name.localeCompare(b.name));
-}
 
-sortItemsDesc() {
-  this.filteredItems.sort((a, b) => b.name.localeCompare(a.name));
+sortItems() {
+  this.filteredItems.sort((a, b) => a.title.localeCompare(b.title));
 }
 }
