@@ -4,10 +4,10 @@
     <h2 class="container mt-3">ITEM LIST</h2>
     <mat-form-field class="mb-3" appearance="fill">
       <mat-label>Search items</mat-label>
-      <br>
-      <button (click)="sortItems()">Sort Items</button>
       <input matInput [(ngModel)]="searchTerm" (input)="filterItems()" />
     </mat-form-field>
+    <br>
+      <button (click)="sortItems()">Sort Items</button>
     <mat-list>
       <mat-list-item *ngFor="let item of filteredItems">
         {{ item.title }}
