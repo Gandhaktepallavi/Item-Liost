@@ -6,9 +6,7 @@
       <mat-label>Search items</mat-label>
       <input matInput [(ngModel)]="searchTerm" (input)="filterItems()" />
     </mat-form-field>
-   sortItems() {
-  this.filteredItems.sort((a, b) => a.title.localeCompare(b.title));
-}
+   <button (click)="sortItems()">Sort Items</button>
     <mat-list>
       <mat-list-item *ngFor="let item of filteredItems">
         {{ item.title }}
